@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+
+    <%for (var i = 0; i < vote.length; i++) {%>
+      <h3><%=vote[i].title%> : <small> <%=vote[i].count%></small> </h3>
+    <%}%>
+
+  </ul>
+
+  </body>
+</html>

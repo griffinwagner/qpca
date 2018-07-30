@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <title></title>
+  </head>
+  <body class="container">
+    <h1 style="color:white">Welcome, <%=user.firstname%>!</h1>
+    <p style="color:white">It's time for QPCA 18! Just scroll down and you can vote for whomever you want!</p>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Math And Physics <small> Your Vote: <%= userData[0].MPvote %> </small>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <% var MPnominees = ["Richard Muller", "Alon Amit", "Viktor T Toth"] %>
+
+        <form action="/mpvote" method="post">
+
+          <% for (var i = 0; i < MPnominees.length; i++) { %>
+
+              <input type="radio" name="vote" value="<%=MPnominees[i]%>"> <%=MPnominees[i]%><br>
+
+          <%}%>
+
+          <button type="submit">Submit</button>
+        </form>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Chem And Bio  <small> Your Vote: <%= userData[0].CBvote %> </small>
+          </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <% var CBnominees = ["Me", "You", "The Other Guy"] %>
+
+        <form action="/cbvote" method="post">
+
+          <% for (var i = 0; i < CBnominees.length; i++) { %>
+
+              <input type="radio" name="vote" value="<%=CBnominees[i]%>"> <%=CBnominees[i]%><br>
+
+          <%}%>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          IT <small> Your Vote: <%= userData[0].ITvote %> </small>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        <% var ITnominees = ["Griffin", "Daniel", "Mukund"] %>
+
+        <form action="/itvote" method="post">
+
+          <% for (var i = 0; i < ITnominees.length; i++) { %>
+
+              <input type="radio" name="vote" value="<%=ITnominees[i]%>"> <%=ITnominees[i]%><br>
+
+          <%}%>
+          <button type="submit">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+  <script type="text/javascript" src="/assets/todo-list.js">
+
+  </script>
+</html>

@@ -1,0 +1,80 @@
+#logo {
+  width:10em;
+  margin:0 auto;
+}
+
+.openLetter {
+  background-color: white;
+  margin:none;
+  border:none;
+  color:black;
+  text-align: center;
+}
+
+.openLetterLink {
+  font-size:20px;
+  color:black;
+}
+
+.openLetterLink:hover {
+  color:#000000;
+}
+
+.letterText {
+  font-size:15px;
+}
+
+label {
+  font-size:120%;
+}
+.header {
+  background: linear-gradient(rgb(255, 0, 0),rgb(255, 255, 255) );
+  height:25vh;
+
+}
+
+
+#logo {
+  margin:7.5vh;
+  width:10vh;
+  height:10vh;
+}
+
+body {
+  background-image: url('/assets/sea.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.openLetter{
+  background:transparent;
+}
+
+#box {
+  background-color:rgba(255,255,255,.80);
+  padding:20px;
+  border-radius: 25px;
+}
+
+.container {
+  padding:2vh 2vh ;
+}
+
+.panel {
+  opacity: .75;
+}
+
+.color{
+  color:black;
+}
+
+small {
+  color:white;
+}
+
+
+
+.openLetter {
+  text-align: center;
+}
